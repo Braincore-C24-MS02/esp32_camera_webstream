@@ -1,6 +1,3 @@
-import asyncio
-import websockets
-import binascii
 from io import BytesIO
 from PIL import Image
 from flask import Flask, Response
@@ -42,4 +39,4 @@ def get_image():
                    b'Content-Type: image/jpeg\r\n\r\n' + img_bytes + b'\r\n')
             continue
 
-app.run(host='0.0.0.0', debug=False, threaded=True)
+app.run(host='0.0.0.0', port=5000, debug=False, threaded=True)
